@@ -4,18 +4,12 @@
     <ul class="nav nav-pills nav-stacked">
       <% @patients.each do |patient| -%>
       <li class="nav-item">
-        <a href="#" class="nav-link"><%= patient.last_name %>, <%= patient.first_name %></a>
+        <a href="/patients/<%= patient.id %>" class="nav-link"><%= patient.last_name %>, <%= patient.first_name %></a>
       </li>
       <% end -%>
     </ul>
   </div>
   <div class="col-xs-9">
-    <h4 class="card-title">BMI Calculations <small>(sorted by date)</small></h4>
-    <ul>
-      <li>{{Patient BMI Calculations}}</li>
-      <li>{{Patient BMI Calculations}}</li>
-      <li>{{Patient BMI Calculations}}</li>
-      <li>{{Patient BMI Calculations}}</li>
-    </ul>
+    <p>Please select a patient</p>
   </div>
 </div>
