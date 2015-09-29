@@ -13,8 +13,13 @@
     <h4 class="card-title">BMI Calculations <small>(sorted by date)</small></h4>
     <ul>
       <% @bmis.each do |bmi| -%>
-      <li><%= bmi[:effective_time] %>: <%= bmi[:bmi]%></li>
+      <li class="bmi"
+          data-date="<%= bmi[:effective_time] %>"
+          data-bmi="<%= bmi[:bmi].round(2) %>"><%= bmi[:effective_time].to_date.to_formatted_s(:long) %>: <%= bmi[:bmi].round(2) %></li>
       <% end -%>
     </ul>
+    <div id="chart" style="height: 400px; margin: 0 auto"></div>
   </div>
+
+
 </div>
